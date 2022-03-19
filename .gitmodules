@@ -1,0 +1,6 @@
+[submodule "fullstack-coding-test-server"]
+	path = fullstack-coding-test-server
+	url = git@github.com:phatnguyen6492/fullstack-coding-test-server.git
+[submodule "fullstack-coding-test-frontend"]
+	path = fullstack-coding-test-frontend
+	url = git@github.com:phatnguyen6492/fullstack-coding-test-frontend.git

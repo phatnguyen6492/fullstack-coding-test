@@ -2,11 +2,11 @@ version: '3.8'
 
 services:
   server:
-    build: ./server
+    build: ./fullstack-coding-test-server
     command: npm run start:dev
-    working_dir: /app
     volumes:
-      - ./server:/app
+      - sever_nm:/usr/src/app/node_modules
+      - ./server:/usr/src/app
     environment:
       PORT: 3000
     ports:
@@ -15,11 +15,11 @@ services:
       - mongodb
 
   frontend:
-    build: ./frontend
+    build: ./fullstack-coding-test-frontend
     command: npm run start
-    working_dir: /app
     volumes:
-      - ./frontend:/app
+      - frontend_nm:/usr/src/app/node_modules
+      - ./frontend:/usr/src/app
     ports:
       - "4000:4000"
 
@@ -35,3 +35,7 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+
+volumes:
+  sever_nm:
+  frontend_nm:
