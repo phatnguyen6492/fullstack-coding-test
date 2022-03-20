@@ -21,7 +21,9 @@ Everything else will be pulled from Docker repositories !
 Getting Started
 ---------------
 ```
-# clone repository, this main repo contains 2 submodule repo
+# clone repository, this main repo contains 2 submodule repo: 
+# fullstack-coding-test-server for backend
+# fullstack-coding-test-frontend for frontend
 $ git clone https://github.com/phatnguyen6492/fullstack-coding-test.git
 $ cd fullstack-coding-test
 $ git submodule update --init --recursive
