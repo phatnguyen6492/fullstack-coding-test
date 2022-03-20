@@ -3,7 +3,7 @@
 Under the hood
 --------
 - NodeJS
-- ExpressJS
+- NestJs
 - MongoDB
 - Mongoose
 - ReactJS
@@ -14,39 +14,25 @@ Under the hood
 
 ## Prerequisites
 - Docker
-- Node JS (just to install dependencies)
+- docker-compose
 
-Everything else will be pulled from Docker/Npm repositories !
+Everything else will be pulled from Docker repositories !
 
 Getting Started
 ---------------
 ```
 # clone repository
-$ git clone https://github.com/denisolek/docker-node-mongo-react-STARTER.git
-$ cd docker-node-mongo-react-STARTER
+$ git clone https://github.com/phatnguyen6492/fullstack-coding-test.git
+$ cd fullstack-coding-test
 ```
 First run
 ```
-# install npm dependencies
-$ cd server
-$ npm install
-$ cd ..
-$ cd frontend
-$ npm install
-$ cd ..
-$ docker-compose up
+$ docker-compose up -d
 
 #open second terminal and run seed (every time you execute it destroy DB and make new one)
-$ ./seed.sh
+$ docker-compose exec mongodb mongorestore -d nest /usr/src/mongodb/nest
 ```
 
-Regular run
-```
-# run your app (you can stop it with CTRL+C)
-$ docker-compose up
+Access React app via http://localhost:4000
 
-# kill containers (DB data will be lost)
-$ docker-compose down
-```
-
-In case of problems: denis.olek@gmail.com
+In case of problems: nnphat6492@gmail.com

@@ -4,9 +4,11 @@ services:
   server:
     build: ./fullstack-coding-test-server
     command: npm run start:dev
+#    command: tail -f /dev/null
+#    working_dir: /usr/src/app
     volumes:
-      - sever_nm:/usr/src/app/node_modules
-      - ./server:/usr/src/app
+      - ./fullstack-coding-test-server:/usr/src/app
+      - /usr/src/app/node_modules
     environment:
       PORT: 3000
     ports:
@@ -17,12 +19,14 @@ services:
   frontend:
     build: ./fullstack-coding-test-frontend
     command: npm run start
+#    working_dir: /usr/src/app
     volumes:
-      - frontend_nm:/usr/src/app/node_modules
-      - ./frontend:/usr/src/app
+      - ./fullstack-coding-test-frontend:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - "4000:4000"
-
+    links:
+      - server
   public:
     image: nginx
     ports:
@@ -33,9 +37,7 @@ services:
 
   mongodb:
     image: mongo
+    volumes:
+      - ./mongodb:/usr/src/mongodb
     ports:
-      - "27017:27017"
-
-volumes:
-  sever_nm:
-  frontend_nm:
+      - "27117:27017"
