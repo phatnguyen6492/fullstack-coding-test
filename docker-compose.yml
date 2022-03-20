@@ -4,8 +4,6 @@ services:
   server:
     build: ./fullstack-coding-test-server
     command: npm run start:dev
-#    command: tail -f /dev/null
-#    working_dir: /usr/src/app
     volumes:
       - ./fullstack-coding-test-server:/usr/src/app
       - /usr/src/app/node_modules
@@ -19,7 +17,6 @@ services:
   frontend:
     build: ./fullstack-coding-test-frontend
     command: npm run start
-#    working_dir: /usr/src/app
     volumes:
       - ./fullstack-coding-test-frontend:/usr/src/app
       - /usr/src/app/node_modules
