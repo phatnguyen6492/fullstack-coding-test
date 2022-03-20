@@ -24,7 +24,6 @@ $ docker-compose up -d
 ```
 Import data to mongo
 ```
-#open second terminal and run seed (every time you execute it destroy DB and make new one)
 $ docker-compose exec mongodb mongorestore -d nest /usr/src/mongodb/nest
 ```
 Access React app via http://localhost:4000
