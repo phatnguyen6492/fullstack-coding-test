@@ -1,16 +1,4 @@
-# [STARTER] Docker-NodeJS-MongoDB-React
-
-Under the hood
---------
-- NodeJS
-- NestJs
-- MongoDB
-- Mongoose
-- ReactJS
-- Webpack
-- Nginx (serving static content compiled by react)
-- Docker
-- docker-compose
+# Docker-NestJs-MongoDB-React
 
 ## Prerequisites
 - Docker
