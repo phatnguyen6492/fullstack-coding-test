@@ -29,10 +29,13 @@ $ cd fullstack-coding-test
 $ git submodule update --init --recursive
 $ git submodule update --recursive --remote
 ```
-First run
+First start applications
 ```
 $ docker-compose up -d
+```
 
+Import data to mongo
+```
 #open second terminal and run seed (every time you execute it destroy DB and make new one)
 $ docker-compose exec mongodb mongorestore -d nest /usr/src/mongodb/nest
 ```
